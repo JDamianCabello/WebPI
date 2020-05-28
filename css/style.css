@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: .6s;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .6s;
+}
+
+header .logo img{
+    height: 100px;
+}
+
+header #toggle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header #toggle:before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 4px;
+    background: #0a81dc;
+}
+
+header #toggle:after{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 4px;
+    background: #03005e;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: url("../img/bg5.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    z-index: 2;
+}
+
+.banner.active{
+    transform: translateX(-400px);
+}
+
+.banner.active header #toggle:before{
+    top: 50%;
+    left: 50%;
+    background: red;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.banner.active header #toggle:after{
+    top: 50%;
+    left: 50%;
+    background: red;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+#navigation{
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 400px;
+    height: 100vh;
+    background: #0a81dc;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: .5s;
+}
+
+#navigation.active{
+    right: 0;
+}
+
+#navigation ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation ul li{
+    list-style: none;
+}
+
+#navigation ul li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#navigation ul li a:hover{
+    /*Colores opciones menu al estar encima*/
+    color: #03005e;
+    text-decoration-line: underline;
+}
+
+.content{
+    max-width: 600px;
+}
+
+.content h2{
+    color: #03005e;
+    font-size: 4em;
+}
+
+.content h2 span{
+    color: #0a81dc;
+    font-size: .5em;
+}
+
+#comma{
+    color: black;
+}
+
+.content p{
+    font-size: 1.2em;
+    color: black;
+    font-weight: 300;
+}
+
+.content a{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: #0a81dc;
+    color: black;
+    border: 1px solid #03005e;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.content a:hover{
+    border: 1px solid #0a81dc;
+    background: #03005e;
+    color: white;
+}
+
+.sci{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid #03005e;
+    margin: 10px 0 0;
+    background: #0a81dc;
+}
+
+.sci li a:hover{
+    background: #03005e;
+    border: 1px solid #0a81dc;
+    place-self: center;
+}
+
+.sci li a img{
+    max-width: 20px;
+    filter: invert(1);
+}
+
+@media (max-width: 767px) {
+    header{
+        padding: 20px 50px;
+    }
+
+    header .logo img{
+        height: 60px;
+    }
+
+    .banner{
+        padding: 100px 50px 150px;
+    }
+
+    .banner h2{
+        font-size: 1.8em;
+    }
+
+    .banner .content p, .banner .content a{
+        font-size: 1em;
+    }
+
+    .banner.active{
+        transform: translateX(-250px);
+    }
+
+    #navigation{
+        width: 250px;
+    }
+
+    #navigation ul li a{
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    .sci{
+        position: absolute;
+        bottom: 50px;
+        right: initial;
+        flex-direction: row;
+    }
+
+    .sci li a{
+        margin: initial;
+        margin-right: 10px;
+    }
+}

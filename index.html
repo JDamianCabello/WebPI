@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo"><img src="img/logo/idea.png"></a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2><br>Focus<span id="comma">,</span><br><span>Tu app para gestionar el estudio</span></h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <a href="#">Descargar FOCUS</a>
+        </div>
+        <ul class="sci">
+            <li><a href="https://github.com/JDamianCabello"><img src="img/github.png"></a></li>
+            <li><a href="https://www.facebook.com/jdamiancabello"><img src="img/facebook.png"></a></li>
+            <li><a href="https://www.linkedin.com/in/jdamiancabello/"><img src="img/linkedin.png"></a></li>
+        </ul>
+    </section>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="faqs.html">FAQ´s</a></li>
+            <li><a href="#">Sobre mí</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var sec=document.getElementById('sec');
+            var nav=document.getElementById('navigation');
+            sec.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

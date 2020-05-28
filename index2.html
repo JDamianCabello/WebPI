@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="inner-width">
+            <a href="index.html" class="logo"><img src="img/logo/idea.png" alt="App_logo"></a>
+            <i class="menu-toggle-btn fas fa-bars"></i>
+            <nav class="navigation-menu">
+                <a href="faqs.html"><i class="fa fa-question-circle question"></i>FAQS</a>
+                <a href="#"><i class="fas fa-align-left about"></i>Sobre mí</a>
+                <a href="#"><i class="fas fa-headset contact"></i>Contacto</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        $(".menu-toggle-btn").click(function () {
+            $(this).toggleClass("fa-times");
+            $(".navigation-menu").toggleClass("active");
+        });
+    </script>
+</body>
+</html>
